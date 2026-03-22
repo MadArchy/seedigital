@@ -470,8 +470,9 @@ ul { list-style: none; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  align-items: stretch;
 }
 
 .service-card {
@@ -1223,6 +1224,7 @@ ul { list-style: none; }
    RESPONSIVE
    =========================== */
 @media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
