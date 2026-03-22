@@ -196,14 +196,17 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   cursor: pointer;
   text-decoration: none;
 }
 
 .logo-mark {
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(79, 195, 247, 0.4));
+  filter: drop-shadow(0 0 12px rgba(79, 195, 247, 0.5));
+  transform: scale(1.45);
+  transform-origin: left center;
+  margin-right: 6px;
 }
 
 .logo-text {
@@ -213,18 +216,18 @@ ul { list-style: none; }
 }
 
 .logo-name {
-  font-size: 1.15rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--white);
   letter-spacing: -0.02em;
 }
 
 .logo-tagline {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   color: var(--blue-light);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav-links {
