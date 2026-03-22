@@ -33,21 +33,7 @@ const fadeObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 fadeEls.forEach(el => fadeObs.observe(el));
 
-// ---- Contact form → WhatsApp ----
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const nombre   = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const servicio = document.getElementById('servicio').value;
-  const tipo     = document.getElementById('tipo').value;
-  const mensaje  = document.getElementById('mensaje').value.trim();
-  if (!nombre || !telefono) { alert('Por favor completa tu nombre y teléfono.'); return; }
-  const sMap = { videovigilancia:'Videovigilancia (cámaras)', acceso:'Control de Accesos', alarmas:'Alarmas y Sensores', panico:'Botón de Pánico', integral:'Sistema Integral', '':'No especificado' };
-  const tMap = { hogar:'Hogar / Residencia', empresa:'Empresa / Local comercial', bodega:'Bodega / Industrial', '':'No especificado' };
-  const msg = [`👋 *Hola SeeDigital, me gustaría solicitar una cotización:*`,``,`👤 *Nombre:* ${nombre}`,`📱 *Teléfono:* ${telefono}`,`🔐 *Servicio:* ${sMap[servicio]||'No especificado'}`,`🏠 *Tipo de propiedad:* ${tMap[tipo]||'No especificado'}`,mensaje?`💬 *Mensaje:* ${mensaje}`:''].filter(Boolean).join('\n');
-  window.open(`https://wa.me/573001234567?text=${encodeURIComponent(msg)}`, '_blank');
-});
+
 
 // ---- Counter animation ----
 function animateCounter(el, target) {
