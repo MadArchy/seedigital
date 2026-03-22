@@ -1295,19 +1295,20 @@ ul { list-style: none; }
   }
   .hero-stats {
     gap: 0;
-    padding: 16px 20px;
+    padding: 14px 12px;
     width: 100%;
     max-width: 100%;
     border-radius: var(--radius-md);
     justify-content: space-around;
+    flex-wrap: nowrap;
   }
   .stat-divider {
     display: block;
     width: 1px;
-    height: 36px;
+    height: 32px;
   }
-  .stat-number { font-size: 1.5rem; }
-  .stat-label { font-size: 0.68rem; }
+  .stat-number { font-size: 1.3rem; }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.03em; }
   .about-features { grid-template-columns: 1fr; }
   .contact-form { grid-template-columns: 1fr; }
   .form-group-full { grid-column: 1; }
